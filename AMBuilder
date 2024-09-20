@@ -8,6 +8,7 @@ sourceFiles = [
   'tickrate_enabler.cpp', 
   os.path.join(Extension.mms_root, 'core', 'sourcehook', 'sourcehook.cpp'),
   os.path.join(Extension.mms_root, 'core', 'sourcehook', 'sourcehook_hookmangen.cpp'),
+  os.path.join(Extension.mms_root, 'core', 'sourcehook', 'sourcehook_hookmangen_x86.cpp'),
   os.path.join(Extension.mms_root, 'core', 'sourcehook', 'sourcehook_impl_chookidman.cpp'),
   os.path.join(Extension.mms_root, 'core', 'sourcehook', 'sourcehook_impl_chookmaninfo.cpp'),
   os.path.join(Extension.mms_root, 'core', 'sourcehook', 'sourcehook_impl_cproto.cpp'),

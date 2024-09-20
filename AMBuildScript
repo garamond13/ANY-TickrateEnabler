@@ -251,15 +251,15 @@ class ExtensionConfig(object):
     ]
 
     if builder.options.opt == '1':
-      cxx.cflags += ['/O2', '/GL']
-      cxx.linkflags += ['/OPT:ICF', '/OPT:REF', '/LTCG']
+      cxx.cflags += ['/Ox', '/Zo']
+      cxx.linkflags += ['/OPT:ICF', '/OPT:REF']
 
     if builder.options.debug == '1':
       cxx.cflags += ['/Od', '/RTC1']
 
     # This needs to be after our optimization flags which could otherwise disable it.
     # Don't omit the frame pointer.
-    #cxx.cflags += ['/Oy-']
+    cxx.cflags += ['/Oy-']
 
   def configure_linux(self, cxx):
     cxx.defines += ['_LINUX', 'POSIX']
